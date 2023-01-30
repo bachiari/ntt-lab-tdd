@@ -1,0 +1,12 @@
+version: '2.12.2'
+
+services:
+  postgres:
+    container_name: dbloginnode
+    image: postgres
+    ports: 
+      - 5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASS=${POSTGRES_PASS}
+      - POSTGRES_NAME=${POSTGRES_NAME}
