@@ -1,1 +1,1 @@
-Repository to present a login application with authentication using TDD practices for the NTT Lab of the LATAM applications web team
+Repository to present a login application with authentication using TDD practices for the NTT Lab 
