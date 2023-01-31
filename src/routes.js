@@ -2,7 +2,7 @@ const routes = require("express").Router();
 
 const { User } = require('./app/models');
 
-User.create({ name: "Barbara", email: "barbara@example.com", password_hash: "123456789" }); //até aqui foi a config do banco!
+User.create({ name: "Barbara", email: "barbara@example.com", password_hash: "123456789" }); //até aqui foi a config do banco! Agora iremos iniciar os testes!
 
 // const authMiddleware = require("./app/middleware/auth");
 
