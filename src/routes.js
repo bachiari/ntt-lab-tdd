@@ -1,15 +1,19 @@
 const routes = require("express").Router();
 
-const authMiddleware = require("./app/middleware/auth");
+const { User } = require('./app/models');
 
-const SessionController = require("./app/controllers/SessionController");
+User.create({ name: "Barbara", email: "barbara@example.com", password_hash: "123456789" }); //até aqui foi a config do banco!
 
-routes.post("/sessions", SessionController.store);
+// const authMiddleware = require("./app/middleware/auth");
 
-routes.use(authMiddleware);
+// const SessionController = require("./app/controllers/SessionController");
 
-routes.get("/dashboard", (req, res) => {
-  return res.status(200).send();
-});
+// routes.post("/sessions", SessionController.store);
+
+// routes.use(authMiddleware);
+
+// routes.get("/dashboard", (req, res) => {
+//   return res.status(200).send();
+// });
 
 module.exports = routes;
