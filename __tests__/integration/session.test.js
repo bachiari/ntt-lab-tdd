@@ -14,9 +14,9 @@ describe("Autenticacao", () => {
     const user = await User.create({
       name: "Babi",
       email: "babi@ntt.com",
-      password_hash: "123123",
+      password: "123123",
     });
-
+    console.log("entrei aqui 1", user.email);
     const response = await request(app).post("/sessions").send({
       email: user.email,
       password: "123123",
@@ -27,9 +27,9 @@ describe("Autenticacao", () => {
 
   it('deve nao autenticar com informacoes invalidas', async() => {
     const user = await User.create({
-      name: "Babi",
-      email: "babi@ntt.com",
-      password_hash: "123123",
+      name: "Barbara",
+      email: "babi@gmail.com",
+      password: "123123",
     });
 
     const response = await request(app).post("/sessions").send({
